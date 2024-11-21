@@ -19,7 +19,7 @@ time.sleep(2)
 
 #simplify
 invalid_text = print('Invalid menu choice! please enter a number between 1 and 4 only.')
-
+thanks = print('Thank you for playing my game...')
 #menu displayed
 def display_menu():
     print('''         Menu:
@@ -31,7 +31,8 @@ def display_menu():
 
 #game
 def main():
-    while True:
+ 
+  while True:
        display_menu()
        choice = float(input('Enter your adventure choice (1-4 only):\n'))
   #Town
@@ -54,7 +55,7 @@ def main():
                 \n'''))
     #leave
           if choice2 == 2:
-              print(f'Thank you for playing my game...')
+              print(thanks)
               time.sleep(2)
               print(f'Goodbye!')
               break
@@ -83,10 +84,27 @@ def main():
                print(f'You take out your sword and slash the slime...')
                time.sleep(2)
                print(f'It dies and drops a chest-piece...')
-               choice3 = float(input('''\nwhat do you do?
+               choice4 = float(input('''\nwhat do you do?
   1. store it in bag
-  3. leave it
+  2. leave it
                 \n'''))
+             if choice3 == 2:
+              print('He wobbles up to you...')
+              time.sleep(2)
+              print('He swarms you with a bunch of his friends...')
+              time.sleep(2)
+              print('He eats you...')
+              time.sleep(1)
+              print(thanks)
+              break
+             if choice3 == 3:
+              print('You go around the slime and you live another day')
+              print(thanks)
+              break
+             else:
+              print(invalid_text)
+
+
            if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
