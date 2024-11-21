@@ -27,18 +27,18 @@ def main():
        if choice == 1:
           print(f'You walk into town and see a adventure guild...')
           time.sleep(2)
-          choice2 = float(input('''what do you do?
-                1.Enter the guild
-                2.stop
-                '''))
+          choice2 = float(input('''\nwhat do you do?
+  1.Enter the guild
+  2.stop
+                \n'''))
           if choice2 == 1:
              print(f'You walk into the guild and see a quest board, you take a quest...')
              time.sleep(2)
-             choice3 = float(input('''what quest do you take?
-                1.E-level quest (easy)
-                2.C-level quest (medium)
-                3.S-level quest (Imposible)
-                '''))
+             choice3 = float(input('''\nwhat quest do you take?
+  1.E-level quest (easy)
+  2.C-level quest (medium)
+  3.S-level quest (Imposible)
+                \n'''))
           if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
@@ -48,7 +48,7 @@ def main():
             print('Invalid menu choice! please enter a number between 1 and 4 only.')
 
 #Forest
-       if choice == 2:
+       elif choice == 2:
            print(f'you walk into the forest and see a dungeon...')
            time.sleep(2)
            choice2 = float(input('''\nwhat do you do?
@@ -58,11 +58,11 @@ def main():
            if choice2 == 1:
              print(f'You walk into the dungeon and see a slime...')
              time.sleep(2)
-             choice3 = float(input('''what do you do?
-                1. Attack it 
-                2. try to talk to it 
-                3. go around it
-                '''))
+             choice3 = float(input('''\nwhat do you do?
+  1. Attack it 
+  2. try to talk to it 
+  3. go around it
+                \n'''))
            if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
@@ -70,26 +70,22 @@ def main():
               break
            else:
             print('Invalid menu choice! please enter a number between 1 and 4 only.')
-            choice2 = float(input('''\nwhat do you do?
-  1.Enter the dungeon
-  2.stop
-                \n'''))
-            if choice2 
  #Shop
        elif choice == 3:
             print(f'You walk into the shop and look around...')
-            print('''do you want to see what they have
-                  1.yes
-                  2.no
-                  ''')
+            time.sleep(2)
+            choice2 = float(input(('''\ndo you want to see what they have
+  1.yes
+  2.no
+                  \n''')))
             if choice2 == 1:
-             print(f'You see many things to buy...')
-             time.sleep(2)
-             choice3 = float(input('''where do you look?
-                1. Armors
-                2. potions
-                3. weapons
-                '''))
+              print(f'You see many things to buy...')
+              time.sleep(2)
+              choice3 = float(input('''\nwhere do you look?
+  1. Armors
+  2. potions
+  3. weapons
+                \n'''))
             if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
@@ -103,8 +99,10 @@ def main():
             time.sleep(2)
             print(f'this is in your bag...')
             time.sleep(2)
+            print("{:s}\n{:s}\n".format("", len(range(150)) * "-"))
             print(f'{bag_items}')
-            choice = float(input('Enter your adventure choice:\n'))
+            print("{:s}\n{:s}\n".format("", len(range(150)) * "-"))
+            time.sleep(2)
        else:
         print('Invalid menu choice! please enter a number between 1 and 4 only.')
 
