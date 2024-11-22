@@ -87,6 +87,7 @@ def main():
                 break
              else:
                 print('Invalid input!')
+                break
     #leave
           if choice2 == 2:
               print('Thanks for playing!')
@@ -95,7 +96,7 @@ def main():
               break
           else:
             print('Invalid menu choice! please enter a number between 1 and 4 only.')
-
+            break
   #Forest
        elif choice == 2:
            print(f'you walk into the forest and see a dungeon...')
@@ -137,7 +138,7 @@ def main():
                   break
                else:
                   print('Invalid input!')
-
+                  break
              if choice3 == 2:
       # talk
               print('He wobbles up to you...')
@@ -156,8 +157,8 @@ def main():
               break
            else:
               print('Invalid menu choice! please enter a number between 1 and 4 only.')
-
-
+              break
+    #leave dungeon
            if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
@@ -165,7 +166,8 @@ def main():
               break
            else:
             print('Invalid menu choice! please enter a number between 1 and 4 only.')
-  #Shop
+            break
+  #Shop        
        elif choice == 3:
             print(f'You walk into the shop and look around...')
             time.sleep(2)
@@ -224,6 +226,7 @@ def main():
               break
             else:
              print('Invalid menu choice! please enter a number between 1 and 4 only.')
+             break
   #bag
        elif choice ==4:
             print('Checking bag...')
