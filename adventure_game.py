@@ -8,18 +8,23 @@ import time
 import random
 
 #lists
-bag_items = ['500 gold coins','Bronze Sword (5 damage)','Rope (10 feet)','(8)Health potion(s)']
+bag_items = ['500 Exso coins','Bronze Sword (5 damage)','Rope (10 feet)','(8)Health potion(s)']
 health_levels = [100]
 levels = [1]
-armors = ['Bronze','Silver','Gold','Dimond','Dracium','Silfisteium']
+armors = ['Bronze(100E)','Silver(500E)','Gold(3000E)','Dimond(20,000E)','Dracium(500,000E)','Silfisteium(777,777,777)']
 weight = [5]
+potions = ['Health potion(100E)','Mana potion(110E)','Strength potion(150E)','Speed potion(100E)',]
+weapons = ['Bronze Sword(100E)','Silver Sword(500E)','Gold Sword(3000E)','Dimond Sword(20,000E)','Dracium Sword(500,000E)','Silfisteium Sword(777,777,777)']
+#simplify
+underline = "{:s}\n{:s}\n".format("", len(range(150)) * "-")
+
+
+
 #first text
 print('This is my adventure game!')
 time.sleep(2)
 
-#simplify
-invalid_text = print('Invalid menu choice! please enter a number between 1 and 4 only.')
-thanks = print('Thank you for playing my game...')
+
 #menu displayed
 def display_menu():
     print('''         Menu:
@@ -31,7 +36,7 @@ def display_menu():
 
 #game
 def main():
- 
+  
   while True:
        display_menu()
        choice = float(input('Enter your adventure choice (1-4 only):\n'))
@@ -53,14 +58,43 @@ def main():
   2.C-level quest (medium)
   3.S-level quest (Imposible)
                 \n'''))
+             if choice3 ==1:
+                print('You go out on a quest for...')
+                time.sleep(2)
+                print('Slimes!')
+                time.sleep(1)
+                print('but..')
+                time.sleep(2)
+                print('Sorry this is the end of the Demo, Thanks for playing!')
+                break
+             if choice3 == 2:
+                print('oh...')
+                time.sleep(1)
+                print('Your to weak...')
+                time.sleep(1)
+                print('You leave and go train to get stronger')
+                time.sleep(2)
+                print('Demo over, thank you for playing the demo of my game!')
+                break
+             if choice3 == 3:
+                print('oh...')
+                time.sleep(1)
+                print('Your to weak...')
+                time.sleep(1)
+                print('You leave and go train to get stronger')
+                time.sleep(2)
+                print('Demo over, thank you for playing the demo of my game!')
+                break
+             else:
+                print('Invalid input!')
     #leave
           if choice2 == 2:
-              print(thanks)
+              print('Thanks for playing!')
               time.sleep(2)
               print(f'Goodbye!')
               break
           else:
-            print(invalid_text)
+            print('Invalid menu choice! please enter a number between 1 and 4 only.')
 
   #Forest
        elif choice == 2:
@@ -88,21 +122,40 @@ def main():
   1. store it in bag
   2. leave it
                 \n'''))
+               if choice4 == 1:
+                  print('Item stored...')
+                  time.sleep(2)
+                  print('Bag updated!')
+                  time.sleep(2)
+                  bag_items.append('chest-piece')
+                  print('Demo over, thank you for playing the demo of my game!')
+                  break
+               if choice4 == 2:
+                  print('You leave the piece of armor and live another day...')
+                  time.sleep(2)
+                  print('Demo over, thank you for playing the demo of my game!')
+                  break
+               else:
+                  print('Invalid input!')
+
              if choice3 == 2:
+      # talk
               print('He wobbles up to you...')
               time.sleep(2)
               print('He swarms you with a bunch of his friends...')
               time.sleep(2)
               print('He eats you...')
               time.sleep(1)
-              print(thanks)
+              print('Thanks for playing!')
               break
              if choice3 == 3:
+      # go around
               print('You go around the slime and you live another day')
-              print(thanks)
+              time.sleep(2)
+              print('Thanks for playing!')
               break
-             else:
-              print(invalid_text)
+           else:
+              print('Invalid menu choice! please enter a number between 1 and 4 only.')
 
 
            if choice2 == 2:
@@ -111,7 +164,7 @@ def main():
               print(f'Goodbye!')
               break
            else:
-            print(invalid_text)
+            print('Invalid menu choice! please enter a number between 1 and 4 only.')
   #Shop
        elif choice == 3:
             print(f'You walk into the shop and look around...')
@@ -129,25 +182,62 @@ def main():
   2. potions
   3. weapons
                 \n'''))
+          #armor
+              if choice3==1: 
+                 print('You browse there armors...')
+                 time.sleep(1)
+                 print('They have...')
+                 time.sleep(1)
+                 print(underline)
+                 print(armors)
+                 print(underline)
+                 print('This is the end of the demo, Thanks for playing!')
+                 break
+          #potions
+              if choice3==2:
+                 print('You browse there potions...')
+                 time.sleep(1)
+                 print('They have...')
+                 time.sleep(1)
+                 print(underline)
+                 print(potions)
+                 print(underline)
+                 print('This is the end of the demo, Thanks for playing!')
+                 break
+          #weapons
+              if choice3==3:
+                 print('You browse there weapons...')
+                 time.sleep(1)
+                 print('They have...')
+                 time.sleep(1)
+                 print(underline)
+                 print(weapons)
+                 print(underline)
+                 print('This is the end of the demo, Thanks for playing!')
+                 break
+              else:
+                 print('Invalid input')
             if choice2 == 2:
               print(f'Thank you for playing my game...')
               time.sleep(2)
               print(f'Goodbye!')
               break
             else:
-             print(invalid_text)
+             print('Invalid menu choice! please enter a number between 1 and 4 only.')
   #bag
        elif choice ==4:
             print('Checking bag...')
             time.sleep(2)
             print(f'this is in your bag...')
             time.sleep(2)
-            print("{:s}\n{:s}\n".format("", len(range(150)) * "-"))
+            print(underline)
             print(f'{bag_items}')
-            print("{:s}\n{:s}\n".format("", len(range(150)) * "-"))
+            print(underline)
             time.sleep(2)
        else:
-        print(invalid_text)
+        print('Invalid menu choice! please enter a number between 1 and 4 only.')
+   
+
 
 if __name__ == '__main__':
     main()
